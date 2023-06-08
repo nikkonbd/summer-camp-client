@@ -1,11 +1,44 @@
 // import React from 'react';
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
+    const { logIn, googleLogin } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
+
+    const handleGoogleSignIN = () => {
+        googleLogin()
+            .then(result => {
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                navigate(from, { replace: true });
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data, e) => {
+        e.target.reset();
+        console.log(data);
+        logIn(data.email, data.password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 
     return (
         <div className="bg-base-200">
@@ -29,19 +62,24 @@ const Login = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="text" placeholder="password" {...register("password")} className="input input-bordered" />
+                                    <input type="password" placeholder="password" {...register("password")} className="input input-bordered" />
                                     <label className="label">
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button className="btn bg-[#59c6bc]"><input className="text-xl" type="submit" value="Login" /></button>
+                                    <button className="btn bg-[#59c6bc] hover:bg-[#7ea8a4]"><input className="text-xl" type="submit" value="Login" /></button>
 
                                 </div>
                                 <label className="label">
                                     <a className="label-text-alt">Dont Have an Account?  <Link to={'/register'}> Register Now</Link></a>
                                 </label>
                             </form>
+                            <div className="flex justify-center mb-6">
+                                <button onClick={handleGoogleSignIN} className="btn btn-circle btn-outline hover:bg-[#59c6bc]">
+                                    <FaGoogle></FaGoogle>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
