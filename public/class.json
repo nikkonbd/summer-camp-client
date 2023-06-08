@@ -1,0 +1,116 @@
+[
+    {
+        "_id": "642c155b2c4774f05c36eeaa",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/services-3.jpg",
+        "name": "Music Engineering Course",
+        "instructor": "John M. Anderson",
+        "available_seats": 10,
+        "student": "55",
+        "category": "popular",
+        "price": 99.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb9",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/services-2.jpg",
+        "name": "Electronic Music Course",
+        "instructor": "Daniel L. Fuller",
+        "available_seats": 12,
+        "student": "25",
+        "price": 49.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7c",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/services-1.jpg",
+        "name": "Music Training Course",
+        "instructor": "Dalton D. Smith",
+        "available_seats": 8,
+        "student": "15",
+        "price": 79.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee88",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/image-7.jpg",
+        "name": "Violin Lessons Course",
+        "instructor": "Matthew B. Arana",
+        "available_seats": 12,
+        "category": "popular",
+        "student": "35",
+        "price": 129.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7a",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/image-2.jpg",
+        "name": "Guitar Lessons Course",
+        "instructor": "Clarence B. Ryans",
+        "available_seats": 5,
+        "student": "45",
+        "price": 69.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8c",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/image-1.jpg",
+        "name": "Free Trial Classes Course",
+        "instructor": "Richard D. Moore",
+        "available_seats": 10,
+        "category": "popular",
+        "student": "25",
+        "price": 109.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee94",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/image-3.jpg",
+        "name": "Music Composition Course",
+        "instructor": "Charles S. Powell",
+        "available_seats": 10,
+        "student": "15",
+        "price": 99.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9e",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/04/image-5.jpg",
+        "name": "Music Management Course",
+        "instructor": "James A. Edmonds",
+        "available_seats": 8,
+        "category": "popular",
+        "student": "20",
+        "price": 79.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea6",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/image-4-1.jpg",
+        "name": "Music Business Courses",
+        "instructor": "Wesley E. Turner",
+        "available_seats": 12,
+        "student": "32",
+        "price": 129.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeaf",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/image-8.jpg",
+        "name": "Music Production Courses",
+        "instructor": "Mike T. Willis",
+        "available_seats": 5,
+        "category": "popular",
+        "student": "46",
+        "price": 49.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee89",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/image-17.jpg",
+        "name": "Music Therapy Course",
+        "instructor": "Deangelo S. Modzelewski",
+        "available_seats": 12,
+        "student": "34",
+        "price": 129.99
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8a",
+        "image": "https://melody.ancorathemes.com/wp-content/uploads/2016/05/image-18.jpg",
+        "name": "Musical Theatre Course",
+        "instructor": "Andrew V. Crowe",
+        "available_seats": 5,
+        "category": "popular",
+        "student": "58",
+        "price": 49.99
+    }
+]

@@ -1,11 +1,16 @@
 // import React from 'react';
 
 // style = "background-image: url(/images/stock/photo-1507358522600-9f71e620c44e.jpg);"
+import useInstructors from '../../hooks/useInstructors';
 import './Instructors.css'
+import InstructorsCard from './InstructorsCard';
 
 
 
 const Instructors = () => {
+
+    const [instructors] = useInstructors();
+    // console.log(instructors.length);
     return (
         <div>
             <div className="hero h-[300px] hero-section">
@@ -17,70 +22,13 @@ const Instructors = () => {
                     </div>
                 </div>
             </div>
-            <div className="max-w-6xl mx-auto gap-6">
-                <div className="grid md:grid-cols-4 my-8 space-y-6">
-                    <div className="w-[260px] text-center mt-6">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-1-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Tim Caroll</h2>
-                        <p><strong>Email:</strong> timcaroll@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-2-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Ronald S. Herd</h2>
-                        <p><strong>Email:</strong> ronaldherd@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-3-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Spencer P. Croom</h2>
-                        <p><strong>Email:</strong> spencercroom@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-1-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">George L. Jensen</h2>
-                        <p><strong>Email:</strong> georgejensen@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-2-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Tim Caroll</h2>
-                        <p><strong>Email:</strong> timcaroll@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-3-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Tim Caroll</h2>
-                        <p><strong>Email:</strong> timcaroll@hotmail.com</p>
-                        <h2></h2>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-1-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Tim Caroll</h2>
-                        <p><strong>Email:</strong> timcaroll@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-2-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Tim Caroll</h2>
-                        <p><strong>Email:</strong> timcaroll@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-3-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Tim Caroll</h2>
-                        <p><strong>Email:</strong> timcaroll@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-1-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Tim Caroll</h2>
-                        <p><strong>Email:</strong> timcaroll@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-2-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Tim Caroll</h2>
-                        <p><strong>Email:</strong> timcaroll@hotmail.com</p>
-                    </div>
-                    <div className="w-[260px] text-center">
-                        <img className="rounded-full" src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-3-370x370.jpg" />
-                        <h2 className="text-2xl font-medium pt-6">Tim Caroll</h2>
-                        <p><strong>Email:</strong> timcaroll@hotmail.com</p>
-                    </div>
-                </div>
+            <div className='max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-8'>
+                {
+                    instructors.map(ins => <InstructorsCard
+                        key={ins._id}
+                        ins={ins}
+                    ></InstructorsCard>)
+                }
             </div>
         </div>
     );
