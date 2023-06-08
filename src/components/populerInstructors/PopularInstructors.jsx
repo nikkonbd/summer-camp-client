@@ -13,7 +13,7 @@ const PopularInstructors = () => {
                 <h2 className="text-4xl font-semibold"><span className="text-[#59c6bc]">Popular Instructors</span> Section</h2>
                 <p>Popular Section</p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 mb-10">
                 {
                     instructor.map(ins => <span
                         key={ins._id}>

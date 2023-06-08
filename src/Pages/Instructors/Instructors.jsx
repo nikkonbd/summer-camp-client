@@ -22,7 +22,7 @@ const Instructors = () => {
                     </div>
                 </div>
             </div>
-            <div className='max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-8'>
+            <div className='max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-8 mb-6'>
                 {
                     instructors.map(ins => <InstructorsCard
                         key={ins._id}

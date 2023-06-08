@@ -4,7 +4,7 @@
 const InstructorsCard = ({ ins }) => {
     const { image, name, email } = ins;
     return (
-        <div className="mb-6">
+        <div className="">
             <div className="card border">
                 <figure className="px-6 pt-6">
                     <img src={image} alt="Shoes" className="rounded-2xl h-[200px]" />

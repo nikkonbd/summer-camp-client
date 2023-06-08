@@ -12,7 +12,7 @@ const MusicGroups = () => {
                     <h2 className="text-4xl font-medium pt-10"><span className="text-[#59c6bc]">Music</span> Groups</h2>
                     <p>For</p>
                 </div>
-                <div className='flex'>
+                <div className='md:flex'>
                     <div className="card">
                         <figure className="px-6 pt-6">
                             <img src={service3} alt="Shoes" className="rounded-full h-[160px]" />
