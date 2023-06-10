@@ -6,7 +6,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -19,6 +19,11 @@ const Register = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 navigate('/');
+                updateUserProfile(data.photo)
+                    .then(() => {
+                        console.log('user updated');
+                    })
+                    .catch(error => console.log(error))
             })
             .catch(error => console.log(error));
     }

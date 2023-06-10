@@ -2,13 +2,13 @@
 // import React from 'react';
 
 const ClassCard = ({ cLL }) => {
-    console.log(cLL);
+    // console.log(cLL);
     const { image, name, instructor, available_seats, price } = cLL;
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
-                <figure className="pt-2">
-                    <img src={image} alt="Shoes" className="rounded-xl h-[240px]" />
+                <figure className="">
+                    <img src={image} alt="Shoes" className="rounded pt-3 h-[240px]" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>

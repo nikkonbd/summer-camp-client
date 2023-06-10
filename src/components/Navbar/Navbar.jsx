@@ -49,16 +49,15 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <button className="btn btn-md mr-2 btn-outline">Book Online</button>
-                    <div className="dropdown dropdown-end">
-                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-3-370x370.jpg" />
-                            </div>
-                        </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Logout</a></li>
-                        </ul>
-                    </div>
+                    {
+                        user && <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img src="https://melody.ancorathemes.com/wp-content/uploads/2016/05/team-3-370x370.jpg" />
+                                </div>
+                            </label>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
