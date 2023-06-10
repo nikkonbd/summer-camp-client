@@ -20,7 +20,7 @@ const Classes = () => {
             </div>
             <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 mb-10 mt-10">
                 {
-                    classes.map(cLL => <ClassCard key={cLL._id} cLL={cLL}></ClassCard>)
+                    classes.map(item => <ClassCard key={item._id} item={item}></ClassCard>)
                 }
             </div>
         </div>

@@ -5,10 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
-const ClassCard = ({ item }) => {
+const PopularCard = ({ item }) => {
+    const { _id, name, image, student, instructor, available_seats, price } = item;
+
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
-    const { image, name, instructor, available_seats, price, _id } = item;
 
     const handleSelectClass = item => {
         console.log(item);
@@ -34,17 +35,16 @@ const ClassCard = ({ item }) => {
             navigate('/login');
         }
     }
+
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
-                <figure className="">
-                    <img src={image} alt="Shoes" className="rounded pt-3 h-[240px]" />
+                <figure className="px-6 pt-6">
+                    <img src={image} alt="Shoes" className="rounded-xl h-[240px]" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
-                    <p><span className="font-medium">Instructor:</span> {instructor}</p>
-                    <div className="flex gap-10"><p><span className="font-medium">Available Seats:</span> {available_seats}</p>
-                        <p><span className="font-medium">Price:</span> ${price}</p></div>
+                    <p>Students: {student}</p>
                     <div className="card-actions">
                         <button onClick={() => handleSelectClass(item)} className="btn bg-[#59c6bc]">Select Class</button>
                     </div>
@@ -54,4 +54,4 @@ const ClassCard = ({ item }) => {
     );
 };
 
-export default ClassCard;
+export default PopularCard;
