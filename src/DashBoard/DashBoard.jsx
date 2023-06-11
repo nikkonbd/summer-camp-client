@@ -17,9 +17,14 @@ const DashBoard = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-[240px] h-full bg-[#59c6bc] text-base-content">
                         {/* Sidebar content here */}
+                        <li><Link to={'/dashboard/user'}>User Home</Link></li>
                         <li><Link to={'/dashboard/selectClass'}>My Selected Classes</Link></li>
                         <li><Link to={'/dashboard/enrolledClass'}>My Enrolled Classes</Link></li>
-                        <button className="btn btn-primary mt-96"><Link to={'/'}>Go to Homepage</Link></button>
+                        <li><Link to={'/dashboard/payment'}>Payment History</Link></li>
+                        <hr className="my-4" />
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li><Link to={'/class'}>Our Classes</Link></li>
+                        <li><Link to={'/instructor'}>Our Instructor</Link></li>
                     </ul>
                 </div>
             </div>
