@@ -14,6 +14,9 @@ import EnrolledClass from "../DashBoard/enrolledClass/EnrolledClass";
 import AllUsers from "../DashBoard/allUsers/AllUsers";
 import UserHome from "../DashBoard/userHome/UserHome";
 import UserPayment from "../DashBoard/userPayment/UserPayment";
+import AddClasses from "../DashBoard/addClasses/AddClasses";
+import Adminuser from "../DashBoard/adminUser/Adminuser";
+import ManageClass from "../DashBoard/manageClass/ManageClass";
 
 const router = createBrowserRouter([
     {
@@ -65,6 +68,18 @@ const router = createBrowserRouter([
             {
                 path: 'payment',
                 element: <UserPayment></UserPayment>
+            },
+            {
+                path: 'addClass',
+                element: <AddClasses></AddClasses>
+            },
+            {
+                path: 'adminUser',
+                element: <Adminuser></Adminuser>
+            },
+            {
+                path: 'manage',
+                element: <ManageClass></ManageClass>
             }
         ]
     }

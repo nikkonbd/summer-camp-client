@@ -25,10 +25,10 @@ const DashBoard = () => {
                         {/* Sidebar content here */}
                         {
                             isAdmin ? <>
-                                <li><NavLink to={'/dashboard/user'}><FaHome></FaHome>Admin Home</NavLink></li>
-                                <li><NavLink to={'/dashboard/selectClass'}><FaBook></FaBook>Add Classes</NavLink></li>
+                                <li><NavLink to={'/dashboard/adminUser'}><FaHome></FaHome>Admin Home</NavLink></li>
+                                <li><NavLink to={'/dashboard/addClass'}><FaBook></FaBook>Add Classes</NavLink></li>
                                 <li><NavLink to={'/dashboard/allUsers'}><FaUserShield></FaUserShield>All Users</NavLink></li>
-                                <li><NavLink to={'/dashboard/payment'}><FaWallet></FaWallet>Manage Class</NavLink></li>
+                                <li><NavLink to={'/dashboard/manage'}><FaWallet></FaWallet>Manage Class</NavLink></li>
                             </> : <><li><NavLink to={'/dashboard/usersHome'}><FaHome></FaHome>User Home</NavLink></li>
                                 <li><NavLink to={'/dashboard/selectClass'}><FaCalendarCheck></FaCalendarCheck>My Selected Classes</NavLink></li>
                                 <li><NavLink to={'/dashboard/enrolledClass'}><FaArchive></FaArchive>My Enrolled Classes</NavLink></li>
