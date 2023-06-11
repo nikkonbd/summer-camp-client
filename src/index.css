@@ -9,3 +9,11 @@
 .active-color a {
     background-color: transparent;
 }
+
+.home-bg {
+    background-image: url(https://melody.ancorathemes.com/wp-content/uploads/2016/05/slider1.jpg);
+    height: 520px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

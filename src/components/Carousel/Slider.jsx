@@ -1,12 +1,12 @@
 // import React from 'react';
-import slider1 from '../../assets/slider1.jpg'
-import slider2 from '../../assets/slider2.jpg'
-import slider3 from '../../assets/slider3.jpg'
+// import slider1 from '../../assets/slider1.jpg'
+// import slider2 from '../../assets/slider2.jpg'
+// import slider3 from '../../assets/slider3.jpg'
 
 const Slider = () => {
     return (
         <div>
-            <div className="carousel w-full">
+            {/* <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full justify-center">
                     <img src={slider1} className="w-full" />
                     <div className="absolute flex gap-4 top-0 items-center bottom-0">
@@ -48,6 +48,13 @@ const Slider = () => {
                         <a href="#slide3" className="btn">❮</a>
                         <a href="#slide1" className="btn">❯</a>
                     </div>
+                </div>
+            </div> */}
+            <div className='home-bg flex justify-center items-center'>
+                <div className="text-center">
+                    <h2 className="text-6xl font-semibold text-white">Music For Everyone!</h2>
+                    <p className='text-white py-6'>Awaken Possibility.</p>
+                    <button className="btn bg-[#59c6bc] text-white mr-5">Start Learning</button>
                 </div>
             </div>
         </div>
