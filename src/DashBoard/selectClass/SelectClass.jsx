@@ -1,6 +1,6 @@
 // import React from 'react';
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import useSelects from "../../hooks/useSelects";
 import { FaTrashAlt } from 'react-icons/fa';
 import Swal from "sweetalert2";
@@ -50,9 +50,9 @@ const SelectClass = () => {
                 <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
                     <h3 className="text-2xl">Total Items: {select.length}</h3>
                     <h3 className="text-2xl">Total Price: ${total}</h3>
-                    <Link>
+                    {/* <Link>
                         <button className="btn bg-[#59c6bc] btn-sm">GO To PAY</button>
-                    </Link>
+                    </Link> */}
                 </div>
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
@@ -64,6 +64,7 @@ const SelectClass = () => {
                                 <th>Class Name</th>
                                 <th>Instructor</th>
                                 <th>Price</th>
+                                <th>Payment</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -87,6 +88,7 @@ const SelectClass = () => {
                                     </td>
                                     <td>{item.instructor}</td>
                                     <td className="">${item.price}</td>
+                                    <td><button className="btn bg-[#59c6bc] btn-sm">PAY NOW</button></td>
                                     <td>
                                         <button onClick={() => handleDelete(item)} className="btn bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
                                     </td>

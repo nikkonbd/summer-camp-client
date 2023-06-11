@@ -11,6 +11,9 @@ import Classes from "../Pages/Classes/Classes";
 import DashBoard from "../DashBoard/DashBoard";
 import SelectClass from "../DashBoard/selectClass/SelectClass";
 import EnrolledClass from "../DashBoard/enrolledClass/EnrolledClass";
+import AllUsers from "../DashBoard/allUsers/AllUsers";
+import UserHome from "../DashBoard/userHome/UserHome";
+import UserPayment from "../DashBoard/userPayment/UserPayment";
 
 const router = createBrowserRouter([
     {
@@ -50,6 +53,18 @@ const router = createBrowserRouter([
             {
                 path: 'enrolledClass',
                 element: <EnrolledClass></EnrolledClass>
+            },
+            {
+                path: 'allUsers',
+                element: <AllUsers></AllUsers>
+            },
+            {
+                path: 'usersHome',
+                element: <UserHome></UserHome>
+            },
+            {
+                path: 'payment',
+                element: <UserPayment></UserPayment>
             }
         ]
     }

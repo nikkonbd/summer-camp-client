@@ -1,8 +1,14 @@
 // import React from 'react';
 
-import { Link, Outlet } from "react-router-dom";
+import { FaArchive, FaArtstation, FaBook, FaCalendarCheck, FaHome, FaUserShield, FaWallet } from "react-icons/fa";
+import { Link, NavLink, Outlet } from "react-router-dom";
+import useAdmin from "../hooks/useAdmin";
 
 const DashBoard = () => {
+
+    // const isAdmin = true;
+
+    const [isAdmin] = useAdmin();
     return (
         <div className="max-w-6xl mx-auto">
             <div className="drawer lg:drawer-open">
@@ -13,18 +19,23 @@ const DashBoard = () => {
                     <label htmlFor="my-drawer-2" className="btn bg-[#59c6bc] drawer-button lg:hidden">Open Dashboard</label>
 
                 </div>
-                <div className="drawer-side">
+                <div className="drawer-side active-color">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-[240px] h-full bg-[#59c6bc] text-base-content">
                         {/* Sidebar content here */}
-                        <li><Link to={'/dashboard/user'}>User Home</Link></li>
-                        <li><Link to={'/dashboard/selectClass'}>My Selected Classes</Link></li>
-                        <li><Link to={'/dashboard/enrolledClass'}>My Enrolled Classes</Link></li>
-                        <li><Link to={'/dashboard/payment'}>Payment History</Link></li>
+                        {
+                            isAdmin ? <>
+                                <li><NavLink to={'/dashboard/user'}><FaHome></FaHome>Admin Home</NavLink></li>
+                                <li><NavLink to={'/dashboard/selectClass'}><FaBook></FaBook>Add Classes</NavLink></li>
+                                <li><NavLink to={'/dashboard/allUsers'}><FaUserShield></FaUserShield>All Users</NavLink></li>
+                                <li><NavLink to={'/dashboard/payment'}><FaWallet></FaWallet>Manage Class</NavLink></li>
+                            </> : <><li><NavLink to={'/dashboard/usersHome'}><FaHome></FaHome>User Home</NavLink></li>
+                                <li><NavLink to={'/dashboard/selectClass'}><FaCalendarCheck></FaCalendarCheck>My Selected Classes</NavLink></li>
+                                <li><NavLink to={'/dashboard/enrolledClass'}><FaArchive></FaArchive>My Enrolled Classes</NavLink></li>
+                                <li><NavLink to={'/dashboard/payment'}><FaArtstation></FaArtstation>Payment History</NavLink></li></>
+                        }
                         <hr className="my-4" />
-                        <li><Link to={'/'}>Home</Link></li>
-                        <li><Link to={'/class'}>Our Classes</Link></li>
-                        <li><Link to={'/instructor'}>Our Instructor</Link></li>
+                        <li><Link to={'/'}><FaHome></FaHome>Home</Link></li>
                     </ul>
                 </div>
             </div>
