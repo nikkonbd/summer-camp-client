@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 // import React from 'react';
 
-const InstructorsCard = ({ ins }) => {
-    const { image, name, email } = ins;
+import { Link } from "react-router-dom";
 
-    const handleSeeClass = (id) => {
-        console.log(id);
-    }
+const InstructorsCard = ({ ins }) => {
+    const { image, name, email, _id } = ins;
+
+    // const handleSeeClass = (id) => {
+    //     console.log(id);
+    // }
     return (
         <div className="">
             <div className="card border">
@@ -17,7 +19,7 @@ const InstructorsCard = ({ ins }) => {
                     <h2 className="card-title">{name}</h2>
                     <p>{email}</p>
                     <div className="card-actions">
-                        <button onClick={() => handleSeeClass(ins._id)} className="btn bg-[#59c6bc]">See Classes</button>
+                        <button className="btn bg-[#59c6bc]"><Link to={`/seeClass/${_id}`}>See Classes</Link></button>
                     </div>
                 </div>
             </div>

@@ -17,11 +17,15 @@ import UserPayment from "../DashBoard/userPayment/UserPayment";
 import AddClasses from "../DashBoard/addClasses/AddClasses";
 import Adminuser from "../DashBoard/adminUser/Adminuser";
 import ManageClass from "../DashBoard/manageClass/ManageClass";
+import SeeClass from "../Pages/Instructors/SeeClass";
+import PageNotFound from "../Pages/pagenotfound/PageNotFound";
+import Payment from "../DashBoard/payment/Payment";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <PageNotFound></PageNotFound>,
         children: [
             {
                 path: '/',
@@ -42,6 +46,10 @@ const router = createBrowserRouter([
             {
                 path: 'classes',
                 element: <Classes></Classes>
+            },
+            {
+                path: 'seeClass',
+                element: <SeeClass></SeeClass>
             }
         ]
     },
@@ -52,6 +60,10 @@ const router = createBrowserRouter([
             {
                 path: 'selectClass',
                 element: <SelectClass></SelectClass>
+            },
+            {
+                path: 'payments',
+                element: <Payment></Payment>
             },
             {
                 path: 'enrolledClass',
