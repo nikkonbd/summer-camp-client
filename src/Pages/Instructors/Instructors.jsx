@@ -1,4 +1,3 @@
-// import React from 'react';
 
 import useInstructors from '../../hooks/useInstructors';
 import './Instructors.css'
