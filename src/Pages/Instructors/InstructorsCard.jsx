@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 const InstructorsCard = ({ ins }) => {
     const { image, name, email, _id } = ins;
 
-    // const handleSeeClass = (id) => {
-    //     console.log(id);
-    // }
     return (
         <div className="">
             <div className="card border">
