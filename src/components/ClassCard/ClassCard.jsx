@@ -14,8 +14,8 @@ const ClassCard = ({ item }) => {
         console.log(item);
         if (user && user.email) {
             const selectClass = { classId: _id, image, name, instructor, available_seats, price, email: user.email }
-            console.log(selectClass);
-            fetch('http://localhost:5000/selects', {
+            // console.log(selectClass);
+            fetch('https://summer-camp-school-server-nikkon1998-gmailcom.vercel.app/selects', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
